@@ -13,6 +13,6 @@ mv kops-linux-amd64 /usr/local/bin/kops
 
 aws s3api create-bucket --bucket vedantrathi11.k8s.local --region us-east-1
 aws s3api put-bucket-versioning --bucket vedantrathi11.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://cloudanddevopsbyraham0073456.k8s.local
+export KOPS_STATE_STORE=s3://vedantrathi11.k8s.local
 kops create cluster --name vedant.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
 kops update cluster --name vedant.k8s.local --yes --admin
